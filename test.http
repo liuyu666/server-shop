@@ -1,0 +1,65 @@
+@url = http://localhost:3000/api
+@json = Content-Type: application/json
+
+###所有用户
+
+GET {{url}}/users
+
+###注册
+POST {{url}}/register
+{{json}}
+
+{
+    "username":"admin3",
+    "password":"123456"
+}
+
+###登陆
+POST {{url}}/login
+{{json}}
+
+{
+    "username":"admin",
+    "password":"123456"
+}
+
+###个人信息
+GET {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZWQyMWQ0MTFmNmVhMDQxOGZhMDk4ZCIsImlhdCI6MTU1OTA0Nzk0OH0.crw0DJ4PeE5l4CLH9emXOGbY3sXJd51NzM0PVzXIbus
+
+###增加商品
+POST {{url}}/addgoods
+{{json}}
+
+{
+    "title":"索尼（SONY）WH-1000XM3 高解析度无线蓝牙降噪耳机（触控面板 智能降噪 长久续航）黑色",
+    "goodsSrc":"https://m.360buyimg.com/babel/jfs/t26881/248/1069038704/78844/5f504fd9/5bc0914fN9c0e3876.jpg!q100.jpg.webp",
+    "price":1099,
+    "num":300
+}
+
+###获取商品
+get {{url}}/showgoods
+{{json}}
+
+
+###客户端登录请求
+POST {{url}}/join
+{{json}}
+
+{
+    "username": "admin2",
+    "password": "123456"
+}
+
+###客户端＋用户
+POST {{url}}/adduser
+{{json}}
+
+{
+    "username":"adminv",
+    "password":"123456"
+}
+
+
+

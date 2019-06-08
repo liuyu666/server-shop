@@ -1,0 +1,31 @@
+[{
+    "admin":"admin",
+    "goods":[{
+        "id":1,
+        "title":"",
+        "img":"",
+        "num":2,
+        "price":499
+    },
+    {
+        "id":2,
+        "title":"",
+        "img":"",
+        "num":2,
+        "price":499
+    },
+    {
+        "id":3,
+        "title":"",
+        "img":"",
+        "num":2,
+        "price":499
+    },
+    {
+        "id":2,
+        "title":"",
+        "img":"",
+        "num":2,
+        "price":499
+    }]
+}]
