@@ -10,7 +10,7 @@ POST {{url}}/register
 {{json}}
 
 {
-    "username":"admin3",
+    "username":"admin",
     "password":"123456"
 }
 
@@ -32,16 +32,31 @@ POST {{url}}/addgoods
 {{json}}
 
 {
-    "title":"索尼（SONY）WH-1000XM3 高解析度无线蓝牙降噪耳机（触控面板 智能降噪 长久续航）黑色",
-    "goodsSrc":"https://m.360buyimg.com/babel/jfs/t26881/248/1069038704/78844/5f504fd9/5bc0914fN9c0e3876.jpg!q100.jpg.webp",
-    "price":1099,
+    "goodsSrc":"https://img14.360buyimg.com/mobilecms/s500x500_jfs/t1/79398/16/1293/105811/5cf8c278E791a290a/f948b82323eb9407.png",
+    "title":"Apple iPhone XS (A2100) 256GB 银色 移动联通电信4G手机",
+    "price":8999,
     "num":300
 }
 
 ###获取商品
-get {{url}}/showgoods
+POST {{url}}/showgoods
 {{json}}
 
+{
+    "sort":1,
+    "page":0,
+    "pageSize":4
+}
+
+###获取价格区间商品
+
+POST {{url}}/goodsection
+{{json}}
+
+{
+    "begin":0,
+    "end":2000
+}
 
 ###客户端登录请求
 POST {{url}}/join

@@ -20,7 +20,19 @@ const userSchema = new mongoose.Schema({
             // console.log(require('bcrypt').hashSync(val,salt))
             return require("bcryptjs").hashSync(val, 8);
         }
-    }
+    },
+    orderList:{type:Array},
+    cartList:[
+        {
+            productId:{ type: String },
+            title:{ type: String },
+            productNum:{ type: Number },
+            price:{ type: String },
+            goodsSrc:{ type: String },
+            checked:{ type: Number }
+        }
+    ],
+    addressList:{type:Array}
 })
 
 
